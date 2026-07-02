@@ -1,0 +1,75 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1e6eff;
+  --ifm-color-primary-dark: #1b63e6;
+  --ifm-color-primary-darker: #195dd8;
+  --ifm-color-primary-darkest: #154db2;
+  --ifm-color-primary-light: #3c82ff;
+  --ifm-color-primary-lighter: #4b8cff;
+  --ifm-color-primary-lightest: #7eb0ff;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.86);
+  --ifm-navbar-link-color: #10233f;
+  --ifm-footer-background-color: #0d1b31;
+  --docusaurus-highlighted-code-line-bg: rgba(30, 110, 255, 0.1);
+}
+
+.navbar {
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(31, 101, 220, 0.08);
+  box-shadow: 0 10px 34px rgba(31, 101, 220, 0.08);
+}
+
+.footer {
+  padding: 0.85rem 0;
+}
+
+.footer__links {
+  display: none;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+/* Docs: only reduce title sizes, keep the original reading layout */
+.theme-doc-markdown h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.theme-doc-markdown h3 {
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+
+/* Category index page title: smaller than default 3rem, still larger than sub-page h1 (2rem) */
+header > h1[class*="title_"] {
+  --ifm-h1-font-size: 2.25rem;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #7db7ff;
+  --ifm-color-primary-dark: #5da5ff;
+  --ifm-color-primary-darker: #4d9cff;
+  --ifm-color-primary-darkest: #1d80ff;
+  --ifm-color-primary-light: #9dc9ff;
+  --ifm-color-primary-lighter: #add2ff;
+  --ifm-color-primary-lightest: #ddecff;
+  --docusaurus-highlighted-code-line-bg: rgba(125, 183, 255, 0.18);
+}
