@@ -1,0 +1,40 @@
+.google-translate-switcher {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.25rem;
+}
+
+.google-translate-switcher__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 2.75rem;
+  height: 2rem;
+  padding: 0 0.55rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ifm-navbar-link-color);
+  font: 600 0.82rem/1 var(--ifm-font-family-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.google-translate-switcher__button:hover,
+.google-translate-switcher__button:focus-visible {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-navbar-link-hover-color);
+  text-decoration: none;
+}
+
+.google-translate-switcher__button:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.google-translate-switcher__label {
+  min-width: 1.05rem;
+  text-align: center;
+  letter-spacing: 0;
+}

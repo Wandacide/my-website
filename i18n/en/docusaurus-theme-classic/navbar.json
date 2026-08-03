@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Liangongbao Help Center",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Liangongbao Help Center",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.帮助文档": {
+    "message": "Help Docs",
+    "description": "Navbar item with label 帮助文档"
+  }
+}

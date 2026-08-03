@@ -1,0 +1,66 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.账号设置": {
+    "message": "Account Settings",
+    "description": "The label for category '账号设置' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.组织管理": {
+    "message": "Organization Management",
+    "description": "The label for category '组织管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.组织管理.link.generated-index.description": {
+    "message": "  ",
+    "description": "The generated-index page description for category '组织管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.培训任务": {
+    "message": "Training Tasks",
+    "description": "The label for category '培训任务' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.培训任务.link.generated-index.description": {
+    "message": " ",
+    "description": "The generated-index page description for category '培训任务' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.学习中心": {
+    "message": "Learning Center",
+    "description": "The label for category '学习中心' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.学习中心.link.generated-index.description": {
+    "message": "  ",
+    "description": "The generated-index page description for category '学习中心' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.资源管理": {
+    "message": "Resource Management",
+    "description": "The label for category '资源管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.资源管理.link.generated-index.description": {
+    "message": " ",
+    "description": "The generated-index page description for category '资源管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.考试管理": {
+    "message": "Exam Management",
+    "description": "The label for category '考试管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.考试管理.link.generated-index.description": {
+    "message": "  ",
+    "description": "The generated-index page description for category '考试管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.积分规则": {
+    "message": "Point Rules",
+    "description": "The label for category '积分规则' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.积分规则.link.generated-index.description": {
+    "message": "  ",
+    "description": "The generated-index page description for category '积分规则' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.档案与合规": {
+    "message": "Archives And Compliance",
+    "description": "The label for category '档案与合规' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.档案与合规.link.generated-index.description": {
+    "message": "  ",
+    "description": "The generated-index page description for category '档案与合规' in sidebar 'tutorialSidebar'"
+  }
+}
