@@ -201,14 +201,17 @@ function searchQuestions(keyword) {
   const normalizedKeyword = normalizeKeyword(keyword);
 
   if (!normalizedKeyword) {
-    return [];
+    return {
+      results: [],
+      resultCount: 0,
+    };
   }
 
   const pageResultCounts = new Map();
   const results = [];
+  const fuseResults = questionFuse.search(normalizedKeyword);
 
-  for (const result of questionFuse
-    .search(normalizedKeyword)
+  for (const result of fuseResults
     .map((result) => ({
       ...result.item,
       score: 1 - result.score,
@@ -228,7 +231,27 @@ function searchQuestions(keyword) {
     }
   }
 
-  return results;
+  return {
+    results,
+    resultCount: fuseResults.length,
+  };
+}
+
+function sendGaSearchEvent(searchTerm, resultCount) {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
+    return;
+  }
+
+  window.gtag('event', 'search', {
+    search_term: searchTerm,
+    result_count: resultCount,
+  });
+
+  if (resultCount === 0) {
+    window.gtag('event', 'search_no_result', {
+      search_term: searchTerm,
+    });
+  }
 }
 
 function getStoredSearchHistory() {
@@ -268,7 +291,8 @@ function HomepageHeader({content, showSearch}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [searchHistory, setSearchHistory] = useState(DEFAULT_SEARCH_HISTORY);
-  const results = useMemo(() => searchQuestions(keyword), [keyword]);
+  const searchState = useMemo(() => searchQuestions(keyword), [keyword]);
+  const {results, resultCount} = searchState;
   const hasKeyword = normalizeKeyword(keyword).length > 0;
   const shouldShowSearchHistory = isSearchFocused && !hasKeyword;
   const searchPanelId = hasKeyword ? 'homepage-search-results' : 'homepage-search-history';
@@ -280,6 +304,20 @@ function HomepageHeader({content, showSearch}) {
   useEffect(() => {
     setActiveIndex((currentIndex) => Math.min(currentIndex, Math.max(results.length - 1, 0)));
   }, [results.length]);
+
+  useEffect(() => {
+    const searchTerm = keyword.trim();
+
+    if (!searchTerm) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => {
+      sendGaSearchEvent(searchTerm, resultCount);
+    }, 500);
+
+    return () => window.clearTimeout(timer);
+  }, [keyword, resultCount]);
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
