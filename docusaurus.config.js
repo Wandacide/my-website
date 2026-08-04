@@ -63,6 +63,9 @@ const config = {
           sidebarPath: './sidebars.js',
         },
         blog: false,
+        gtag: {
+          trackingID: 'G-W6FT2C46GX',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
