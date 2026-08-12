@@ -11,11 +11,9 @@ import {
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import NavbarItem from '@theme/NavbarItem';
-import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import GoogleTranslateSwitcher from '@site/src/components/GoogleTranslateSwitcher';
-import styles from './styles.module.css';
 
 function useNavbarItems() {
   return useThemeConfig().navbar.items;
@@ -89,7 +87,6 @@ export default function NavbarContent() {
       right={
         <>
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
           <GoogleTranslateSwitcher />
         </>
       }
